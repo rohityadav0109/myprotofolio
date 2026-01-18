@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 // Add to your page/layout
-import '@/styles/globals.css';
+
 
 import { FaLinkedin, FaInstagram, FaStar } from "react-icons/fa";
 import { 
