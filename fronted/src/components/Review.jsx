@@ -5,7 +5,7 @@ import {
   SiTensorflow, 
   SiPytorch, 
   SiOpencv, 
-  SiHuggingFace, 
+  FaRobot, 
   SiNumpy, 
   SiScikitlearn 
 } from "react-icons/si";
