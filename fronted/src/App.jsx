@@ -4,6 +4,8 @@ import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+// Add to your page/layout
+import '@/styles/globals.css';
 
 // 🧭 Theme Context
 import { ThemeProvider } from "./components/ThemeContext";
@@ -19,6 +21,7 @@ import AIToolsPage from "./components/AIToolsPage";
 import Review from "./components/Review";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 import Payment from "./components/Payment";
 import ProjectCard from "./components/ProjectCard";
 import Papers from "./pages/StudyMaterial/Semester1/Paper/paper";
