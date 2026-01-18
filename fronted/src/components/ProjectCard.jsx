@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt, FaStar } from 'react-icons/fa'
+import { FaGithub, FaExternalLinkAlt, FaStar, FaBrain } from 'react-icons/fa'
 import { 
   SiReact, 
-  SiNextjs, 
   SiTensorflow, 
   SiPytorch, 
   SiDocker,
   SiVercel 
-} from 'react-icons/si'
+} from 'react-icons/si'  // ✅ SiNextjs REMOVED - doesn't exist
 
 const ProjectCard = ({ 
   imgSrc, 
@@ -40,7 +39,7 @@ const ProjectCard = ({
       {/* Neural Glow Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-1000" />
       
-      {/* Project Thumbnail - 3D Glass Effect */}
+      {/* Project Thumbnail */}
       <motion.div 
         className="relative mb-8 aspect-video rounded-2xl overflow-hidden ring-4 ring-white/10 group-hover:ring-cyan-400/40 transition-all duration-700"
         whileHover={{ scale: 1.05 }}
@@ -51,9 +50,7 @@ const ProjectCard = ({
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           loading="lazy"
         />
-        {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        {/* Live demo badge */}
         <div className="absolute top-4 right-4 bg-emerald-500/90 backdrop-blur-sm px-3 py-1 rounded-xl text-xs font-bold text-black opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse">
           LIVE DEMO
         </div>
@@ -67,24 +64,24 @@ const ProjectCard = ({
         {title}
       </motion.h3>
 
-      {/* Dynamic Tech Stack Chips */}
+      {/* ✅ FIXED Tech Stack Chips */}
       <div className="flex flex-wrap gap-2 mb-8">
         {tags.map((tag, key) => {
           const iconMap = {
             'React': SiReact,
-            'Next.js': SiNextjs,
             'TensorFlow': SiTensorflow,
             'PyTorch': SiPytorch,
             'Docker': SiDocker,
             'Vercel': SiVercel,
-            'AI/ML': FaBrain
+            'AI/ML': FaBrain,
+            'Fullstack': FaGithub  // ✅ Real icons only
           }
           const Icon = iconMap[tag] || null
           
           return (
             <motion.span
               key={key}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 group-chip"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-sm font-bold bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300"
               whileHover={{ scale: 1.1, y: -2 }}
             >
               {Icon && <Icon className="w-4 h-4" />}
@@ -133,17 +130,16 @@ const ProjectCard = ({
         )}
       </div>
 
-      {/* Matrix Code Effect */}
+      {/* Matrix Code + Bottom Glow */}
       <div className="absolute top-4 left-4 text-xs font-mono text-cyan-400/30 mix-blend-difference opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none">
         [AI_ENGINE] 010101
       </div>
-
-      {/* Bottom Glow Border */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-emerald-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mx-4 rounded-b-3xl" />
     </motion.a>
   )
 }
 
+// PropTypes unchanged
 ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
