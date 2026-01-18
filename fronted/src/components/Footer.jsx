@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram, FaEnvelope, FaStar } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaStar } from "react-icons/fa";
 import { ButtonPrimary } from "./Button";
 
 const sitemap = [
@@ -17,7 +17,7 @@ const sitemap = [
 const socials = [
   { label: "GitHub", href: "https://github.com/yadavrohit0109", icon: FaGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-yadav-14b4411b2", icon: FaLinkedin },
-  { label: "Twitter / X", href: "https://x.com/rohitkumar0789", icon: FaXTwitter },
+  { label: "Twitter/x", href: "https://x.com/rohitkumar0789", icon: FaXTwitter },
   { label: "Instagram", href: "https://www.instagram.com/_rohit_yadav_0109/", icon: FaInstagram },
 ];
 
