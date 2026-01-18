@@ -17,7 +17,7 @@ const sitemap = [
 const socials = [
   { label: "GitHub", href: "https://github.com/yadavrohit0109", icon: FaGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-yadav-14b4411b2", icon: FaLinkedin },
-  { label: "Twitter/x", href: "https://x.com/rohitkumar0789", icon: FaXTwitter },
+  { label: "Twitter / x", href: "https://x.com/rohitkumar0789", icon: FaXTwitter },
   { label: "Instagram", href: "https://www.instagram.com/_rohit_yadav_0109/", icon: FaInstagram },
 ];
 
