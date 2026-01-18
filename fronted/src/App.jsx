@@ -4,8 +4,6 @@ import { ReactLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-// Add to your page/layout
-import '@/styles/globals.css';
 
 // 🧭 Theme Context
 import { ThemeProvider } from "./components/ThemeContext";
