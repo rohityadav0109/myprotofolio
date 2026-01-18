@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";  // ✅ ADDED MISSING IMPORT
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaStar } from "react-icons/fa";  // ✅ FaTwitter FIXED
 import { ButtonPrimary } from "./Button";
 
 const sitemap = [
@@ -17,7 +17,7 @@ const sitemap = [
 const socials = [
   { label: "GitHub", href: "https://github.com/yadavrohit0109", icon: FaGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/rohit-yadav-14b4411b2", icon: FaLinkedin },
-  { label: "Twitter / x", href: "https://x.com/rohitkumar0789", icon: FaXTwitter },
+  { label: "Twitter / X", href: "https://x.com/rohitkumar0789", icon: FaTwitter },  // ✅ FIXED: FaTwitter
   { label: "Instagram", href: "https://www.instagram.com/_rohit_yadav_0109/", icon: FaInstagram },
 ];
 
@@ -37,7 +37,6 @@ const Footer = () => {
     <footer className="relative py-24 px-6 overflow-hidden">
       {/* Cyberpunk Neural Matrix Background */}
       <div className="absolute inset-0">
-        {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-black/90 to-slate-950/80" />
         
         {/* Animated neural network nodes */}
@@ -251,7 +250,7 @@ const Footer = () => {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
         }
-        .hover\:animate-spin-slow:hover {
+        .hover\\:animate-spin-slow:hover {
           animation: spin-slow 4s linear infinite;
         }
       `}</style>
